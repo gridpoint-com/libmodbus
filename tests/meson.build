@@ -6,43 +6,43 @@ incdir = include_directories('../src')
 
 bandwidth_server_one = executable(
     'bandwidth-server-one', 'bandwidth-server-one.c',
-    link_with : modbuslib,
+    link_with : libmodbus,
     include_directories : incdir
 )
 
 bandwidth_server_many_up = executable(
     'bandwidth-server-many-up', 'bandwidth-server-many-up.c',
-    link_with : modbuslib,
+    link_with : libmodbus,
     include_directories : incdir
 )
 
 bandwidth_client = executable(
     'bandwidth-client', 'bandwidth-client.c',
-    link_with : modbuslib,
+    link_with : libmodbus,
     include_directories : incdir
 )
 
 random_test_server = executable(
     'random-test-server', 'random-test-server.c',
-    link_with : modbuslib,
+    link_with : libmodbus,
     include_directories : incdir
 )
 
 random_test_client = executable(
     'random-test-client', 'random-test-client.c',
-    link_with : modbuslib,
+    link_with : libmodbus,
     include_directories : incdir
 )
 
 unit_test_server = executable(
     'unit-test-server', 'unit-test-server.c',
-    link_with : modbuslib,
+    link_with : libmodbus,
     include_directories : incdir
 )
 
 unit_test_client = executable(
     'unit-test-client', 'unit-test-client.c',
-    link_with : modbuslib,
+    link_with : libmodbus,
     include_directories : incdir
 )
 

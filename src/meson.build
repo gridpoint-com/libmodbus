@@ -22,8 +22,10 @@ lt_revision = 0
 lt_age = 1
 lt_version = '@0@.@1@.@2@'.format(lt_current, lt_age, lt_revision)
 
-modbuslib = library('modbus', sources,
-                    version: lt_version,
-                    soversion: lt_current,
-                    include_directories : include_directories('..'),
-                    install : true)
+libmodbus = shared_library('modbus', sources,
+                           version: lt_version,
+                           soversion: lt_current,
+                           include_directories : include_directories('..'),
+                           install : true)
+
+libmodbus_dep = declare_dependency(link_with : libmodbus)
