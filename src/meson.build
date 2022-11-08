@@ -28,4 +28,6 @@ libmodbus = shared_library('modbus', sources,
                            include_directories : include_directories('..'),
                            install : true)
 
-libmodbus_dep = declare_dependency(link_with : libmodbus)
+incdir = include_directories('../src')
+libmodbus_dep = declare_dependency(link_with : libmodbus,
+                                   include_directories: incdir)
